@@ -1,4 +1,13 @@
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
+# MSM8996
+dtb-$(CONFIG_MACH_SONY_DORA)            += msm8996-v3.0-pmi8996-tone-dora_generic.dtb
+dtb-$(CONFIG_MACH_SONY_DORA)            += msm8996-v3-pmi8996-tone-dora_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KAGURA)          += msm8996-v3.0-pmi8996-tone-kagura_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KAGURA)          += msm8996-v3-pmi8996-tone-kagura_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KEYAKI)          += msm8996-v3.0-pmi8996-tone-keyaki_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KEYAKI)          += msm8996-v3-pmi8996-tone-keyaki_generic.dtb
+
+ifneq ($(CONFIG_ARCH_SONY_TONE),y)
 dtbo-$(CONFIG_ARCH_MSM8996) += \
 	msm8996-mtp-overlay.dtbo \
 	msm8996-cdp-overlay.dtbo \
@@ -24,7 +33,17 @@ msm8996pro-auto-adp-overlay.dtbo-base := msm8996pro-auto.dtb
 msm8996pro-auto-adp-lite-overlay.dtbo-base := msm8996pro-auto.dtb
 apq8096pro-auto-cdp-overlay.dtbo-base := apq8096pro-auto.dtb
 msm8996pro-v1.1-auto-cdp-overlay.dtbo-base := msm8996pro-v1.1-auto.dtb
+endif
 else
+# MSM8996
+dtb-$(CONFIG_MACH_SONY_DORA)            += msm8996-v3.0-pmi8996-tone-dora_generic.dtb
+dtb-$(CONFIG_MACH_SONY_DORA)            += msm8996-v3-pmi8996-tone-dora_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KAGURA)          += msm8996-v3.0-pmi8996-tone-kagura_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KAGURA)          += msm8996-v3-pmi8996-tone-kagura_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KEYAKI)          += msm8996-v3.0-pmi8996-tone-keyaki_generic.dtb
+dtb-$(CONFIG_MACH_SONY_KEYAKI)          += msm8996-v3-pmi8996-tone-keyaki_generic.dtb
+
+ifneq ($(CONFIG_ARCH_SONY_TONE),y)
 dtb-$(CONFIG_ARCH_MSM8996) += msm8996-v2-pmi8994-cdp.dtb \
 	msm8996-v2-pmi8994-mtp.dtb \
 	msm8996-v2-pmi8994-pmk8001-cdp.dtb \
